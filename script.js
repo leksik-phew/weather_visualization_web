@@ -7,11 +7,12 @@ const themeLink = document.getElementById('theme-link');
 async function fetchWeather(city) {
     try {
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=ru`
+
+            `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=en`
         );
 
         if (!response.ok) {
-            throw new Error('Город не найден');
+            throw new Error('City not found');
         }
         const data = await response.json();
         
@@ -48,13 +49,13 @@ async function fetchWeather(city) {
         weatherDisplay.innerHTML = `
             <div class="emoji">${emoji}</div>
             <div class="details">
-                <p><strong>Погода:</strong> ${description}</p>
-                <p><strong>Температура:</strong> ${temp}&deg;C (ощущается как ${feelsLike}&deg;C)</p>
-                <p><strong>Влажность:</strong> ${humidity}%</p>
+                <p><strong>Weather:</strong> ${description}</p>
+                <p><strong>Temperature:</strong> ${temp}&deg;C (feels like ${feelsLike}&deg;C)</p>
+                <p><strong>Humidity:</strong> ${humidity}%</p>
             </div>
         `;
     } catch (error) {
-        weatherDisplay.innerHTML = `<p style="color:red;">Ошибка: ${error.message}</p>`;
+        weatherDisplay.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
         console.error(error);
     }
 }
@@ -65,7 +66,7 @@ getWeatherButton.addEventListener('click', () => {
         fetchWeather(city);
         document.getElementById('city-selection').style.display = 'none';
         changeCityButton.style.display = 'inline-block';
-
+        
     }
 });
 
