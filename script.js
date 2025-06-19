@@ -16,7 +16,7 @@ function getWeatherMood(weatherMain, temp) {
     const moods = {
         'Clear': {
             warm: 'Perfect day for outdoor activities! ☀️',
-            cold: 'Beautiful but chilly day! ❄️'
+            cold: 'Beautiful but chilly day! ☀️❄️'
         },
         'Clouds': 'A bit gloomy, but cozy! ☁️',
         'Rain': 'Perfect day to stay inside with a book! 📚☕',
@@ -108,6 +108,7 @@ async function fetchWeather(city) {
 
         document.getElementById('city-selection').style.display = 'none';
         changeCityButton.style.display = 'block';
+        changeCityButton.style.margin = '1rem auto 0';
 
     } catch (error) {
         weatherDisplay.innerHTML = `<p class="error">Error: ${error.message}</p>`;

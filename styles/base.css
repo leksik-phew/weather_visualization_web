@@ -175,3 +175,10 @@ button:active {
     transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
+
+#change-city-button {
+    max-width: 300px;
+    width: 100%;
+    margin-top: 1rem;
+    display: none;
+}
