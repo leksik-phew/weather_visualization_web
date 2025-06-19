@@ -64,8 +64,19 @@ A responsive web application that displays current weather conditions with anima
   ```
 
 3. **Response Handling**:
-   - Parses JSON response for:
-      
+   - Parses JSON response for:   
      - Weather condition (Clear, Rain, Snow etc.)
      - Temperature data
      - Humidity
+
+   - Handles errors (invalid city, network issues)
+
+4. **UI Update**:
+   - Dynamically loads appropriate CSS theme
+   - Applies weather-specific animations
+   - Updates DOM with weather information
+
+5. **Customization**:
+  - Easy Modifications:
+   - Themes:
+    - Edit any [weather-type].css file to change:
