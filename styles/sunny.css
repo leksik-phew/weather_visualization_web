@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(to top, #87CEEB, #ffffff); 
+    color: #333;
+    font-family: Arial, sans-serif;
+    transition: background 0.5s ease;
+}
+
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#city-selection {
+    margin-bottom: 1rem;
+}
+
+#city-input {
+    padding: 0.5rem; font-size: 1rem;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+#city-selection button {
+    padding: 0.55rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.weather-info .emoji {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+@keyframes sun-beam {
+    from { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    to { transform: scale(1); }
+}
+.emoji {
+    animation: sun-beam 3s infinite ease-in-out;
+}
+
+body {
+    background: linear-gradient(to top, #fceabb, #f8b500);
+    color: #333;
+    font-family: sans-serif;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+.weather-info .emoji::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 50px);
+    top: 20%;
+    background: radial-gradient(circle, #fff59d, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.4); opacity: 0.3; }
+}

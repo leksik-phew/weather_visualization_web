@@ -1,0 +1,73 @@
+body {
+    background: linear-gradient(to top, #757F9A, #D7DDE8); 
+    color: #333;
+    font-family: Arial, sans-serif;
+    transition: background 0.5s ease;
+}
+
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#city-selection {
+    margin-bottom: 1rem;
+}
+
+#city-input, #city-selection button {
+    padding: 0.5rem; font-size: 1rem;
+}
+
+.weather-info .emoji {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 10%;
+    left: -30%;
+    width: 200px;
+    height: 100px;
+    background: url('../assets/cloud.png') no-repeat;
+    background-size: contain;
+    animation: moveClouds 20s linear infinite;
+}
+
+@keyframes moveClouds {
+    from { left: -30%; }
+    to { left: 100%; }
+}
+
+body {
+    background: linear-gradient(to top, #757F9A, #D7DDE8);
+    color: #333;
+    font-family: sans-serif;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+body::before, body::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    width: 200px;
+    height: 100px;
+    background: url('../assets/cloud.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.6;
+    animation: cloud-move 60s linear infinite;
+}
+
+body::after {
+    top: 30%;
+    left: -250px;
+    animation-delay: 10s;
+}
+
+@keyframes cloud-move {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(200%); }
+}
