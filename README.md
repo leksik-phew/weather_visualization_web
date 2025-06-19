@@ -42,23 +42,23 @@ A responsive web application that displays current weather conditions with anima
    cd weather-visualization
    ```
 3. **Running the app**:
-  - Simply open index.html in your preferred browser
-  - No server required - works as a standalone web app
+   - Simply open index.html in your preferred browser
+   - No server required - works as a standalone web app
 
 4. **Using the app**:
-  - Type a city name in the input field
-  - Press "Show Weather" or hit Enter
-  - Use "Change City" button to search again
+   - Type a city name in the input field
+   - Press "Show Weather" or hit Enter
+   - Use "Change City" button to search again
 
 ## How It Works
 ### Technical flow
 
 1. **User Input**:
-  - City name is captured from the input field
-  - Input is sanitized to prevent XSS attacks
+   - City name is captured from the input field
+   - Input is sanitized to prevent XSS attacks
 
 2. **API Request**:
-  - Application makes GET request to OpenWeatherMap API
+   - Application makes GET request to OpenWeatherMap API
   ```javascript
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
   ```
