@@ -77,6 +77,22 @@ A responsive web application that displays current weather conditions with anima
    - Updates DOM with weather information
 
 5. **Customization**:
-  - Easy Modifications:
    - Themes:
      - Edit any [weather-type].css file to change:
+       - Background gradients
+       - Animation timings
+       - Color schemes
+   - API:
+     - Replace API key in script.js:
+     ```javascript
+     const apiKey = 'your_api_key_here';
+     ```
+   - Advanced Customization:
+     - Add new weather types by:
+       - Creating new CSS file (e.g., hurricane.css)
+       - Extending the condition check in script.js
+
+
+
+
+
