@@ -79,4 +79,4 @@ A responsive web application that displays current weather conditions with anima
 5. **Customization**:
   - Easy Modifications:
    - Themes:
-    - Edit any [weather-type].css file to change:
+     - Edit any [weather-type].css file to change:
