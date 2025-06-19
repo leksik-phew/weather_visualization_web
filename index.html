@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/sunny.css" id="theme-link">
 </head>
@@ -15,8 +15,13 @@
             <button id="get-weather-button">Show Weather</button>
         </div>
         <div id="weather-display" class="weather-info"></div>
+        <div id="mood-text" class="mood"></div>
         <button id="change-city-button" style="display: none;">Change City</button>
     </div>
+
+    <div class="rain" style="display: none;"></div>
+    <div class="lightning" style="display: none;"></div>
+    <div class="fog-layer" style="display: none;"></div>
 
     <script src="script.js"></script>
 </body>

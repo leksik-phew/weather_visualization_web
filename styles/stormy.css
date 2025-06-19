@@ -48,3 +48,20 @@ body {
     96% { background-color: #ffffff; }
     97% { background-color: #232526; }
 }
+
+.lightning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    z-index: 1;
+    animation: lightning 8s infinite;
+}
+
+@keyframes lightning {
+    0%, 30%, 33%, 63%, 65%, 100% { opacity: 0; }
+    31%, 32%, 64% { opacity: 0.8; }
+}
