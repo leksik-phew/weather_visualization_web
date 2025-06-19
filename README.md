@@ -64,3 +64,8 @@ A responsive web application that displays current weather conditions with anima
   ```
 
 3. **Response Handling**:
+   - Parses JSON response for:
+      
+     - Weather condition (Clear, Rain, Snow etc.)
+     - Temperature data
+     - Humidity
