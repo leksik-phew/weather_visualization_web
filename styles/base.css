@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.1rem;
     font-size: 2rem;
     animation: float 3s ease-in-out infinite;
 }
@@ -63,7 +63,6 @@ h1 {
     border-color: #2196f3;
 }
 
-/* Base button style */
 button {
     font-weight: bold;
     font-size: 1rem;
@@ -143,6 +142,10 @@ button:active {
     h1 {
         font-size: 1.5rem;
     }
+    
+    #city-name {
+        font-size: 1.2rem;
+    }
 }
 
 .error {
@@ -182,3 +185,12 @@ button:active {
     margin-top: 1rem;
     display: none;
 }
+
+#city-name {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    animation: float 3s ease-in-out infinite;
+    margin-bottom: 1.5rem;
+}
+

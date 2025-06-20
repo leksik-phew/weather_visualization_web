@@ -65,3 +65,7 @@ body {
     0%, 30%, 33%, 63%, 65%, 100% { opacity: 0; }
     31%, 32%, 64% { opacity: 0.8; }
 }
+
+#city-name {
+    color: inherit;
+}

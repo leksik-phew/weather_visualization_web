@@ -83,3 +83,7 @@ body {
     from { background-position: 0 0; }
     to { background-position: -10px 10px; }
 }
+
+#city-name {
+    color: inherit;
+}

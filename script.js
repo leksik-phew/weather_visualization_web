@@ -5,6 +5,7 @@ const weatherDisplay = document.getElementById('weather-display');
 const themeLink = document.getElementById('theme-link');
 const changeCityButton = document.getElementById('change-city-button');
 const moodText = document.getElementById('mood-text');
+const cityNameElement = document.getElementById('city-name');
 
 function sanitizeInput(input) {
     const div = document.createElement('div');
@@ -40,13 +41,11 @@ async function fetchWeather(city) {
 
     try {
         weatherDisplay.innerHTML = '<p>Loading weather data...</p>';
+        cityNameElement.textContent = '';
         
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=en`
         );
-
-        console.log(response);
-        
 
         if (!response.ok) {
             throw new Error(response.status === 404 ? 'City not found' : 'Weather data unavailable');
@@ -95,6 +94,7 @@ async function fetchWeather(city) {
         document.querySelector('.lightning').style.display = theme === 'stormy' ? 'block' : 'none';
         document.querySelector('.fog-layer').style.display = theme === 'foggy' ? 'block' : 'none';
 
+        cityNameElement.textContent = `at ${data.name}`;
         weatherDisplay.innerHTML = `
             <div class="emoji">${emoji}</div>
             <div class="details">
@@ -112,6 +112,7 @@ async function fetchWeather(city) {
 
     } catch (error) {
         weatherDisplay.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+        cityNameElement.textContent = '';
         console.error('Weather fetch error:', error);
     }
 }
@@ -131,6 +132,7 @@ changeCityButton.addEventListener('click', () => {
     document.getElementById('city-selection').style.display = 'flex';
     weatherDisplay.innerHTML = '';
     moodText.textContent = '';
+    cityNameElement.textContent = '';
     changeCityButton.style.display = 'none';
     cityInput.value = '';
     cityInput.focus();
